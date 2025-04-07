@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"github.com/aaomidi/mcp-bazel/tools/build"
 	"github.com/aaomidi/mcp-bazel/tools/rdeps"
 
 	"github.com/mark3labs/mcp-go/server"
@@ -16,6 +17,7 @@ func _main() error {
 
 	// Register tools
 	s.AddTool(rdeps.Tool, rdeps.Handler)
+	s.AddTool(build.Tool, build.Handler)
 
 	return server.ServeStdio(s)
 }
