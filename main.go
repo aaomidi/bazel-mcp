@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/aaomidi/mcp-bazel/tools/build"
+	"github.com/aaomidi/mcp-bazel/tools/deps"
 	"github.com/aaomidi/mcp-bazel/tools/rdeps"
 	"github.com/aaomidi/mcp-bazel/tools/sources"
 	"github.com/aaomidi/mcp-bazel/tools/test"
@@ -22,6 +23,7 @@ func _main() error {
 	s.AddTool(build.Tool, build.Handler)
 	s.AddTool(test.Tool, test.Handler)
 	s.AddTool(sources.Tool, sources.Handler)
+	s.AddTool(deps.Tool, deps.Handler)
 
 	return server.ServeStdio(s)
 }
