@@ -8,7 +8,13 @@ Features and interfaces may change.
 
 ## Features
 
-*   **Reverse Dependencies (`reverse-dependencies`):** Find all Bazel targets that depend on a given target or file path within a project.
+This server currently provides the following tools:
+
+*   **`build`:** Builds a specified Bazel target.
+*   **`deps`:** Finds the dependencies of a given Bazel target, with an optional depth parameter.
+*   **`rdeps` (Reverse Dependencies):** Finds all Bazel targets that depend on a given target or file path, with an optional depth parameter.
+*   **`sources`:** Finds the direct source files associated with a given Bazel target.
+*   **`test`:** Runs tests for a specified Bazel target.
 
 ## Usage with Claude Desktop
 
