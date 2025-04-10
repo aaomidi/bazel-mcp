@@ -1,6 +1,6 @@
 module github.com/aaomidi/mcp-bazel
 
-go 1.24.2
+go 1.24
 
 require github.com/mark3labs/mcp-go v0.18.0
 
